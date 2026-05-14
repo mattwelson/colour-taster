@@ -116,14 +116,14 @@ export function ColourTaster() {
           </ToggleGroup>
         </div>
 
-        {background && foreground && (
-          <div
-            className={cn(background, foreground, "space-y-2 rounded-lg p-4")}
-          >
-            <p className="font-serif text-lg font-semibold">Preview</p>
-            <p className="">The quick brown fox jumps over the lazy dog.</p>
-          </div>
-        )}
+        <div className="font-mono">
+          .{background} .{foreground}
+        </div>
+
+        <div className={cn(background, foreground, "space-y-2 rounded-lg p-4")}>
+          <p className="font-serif text-lg font-semibold">Preview</p>
+          <p className="">The quick brown fox jumps over the lazy dog.</p>
+        </div>
       </CardContent>
     </Card>
   )
