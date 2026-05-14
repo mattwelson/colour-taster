@@ -36,23 +36,7 @@ export type TailwindText =
   | "text-white"
   | "text-black"
 
-type ColourOption = {
-  backgrounds: TailwindBg[]
-  foregrounds: TailwindText[]
-}
-
-type ColourValue = {
-  value: TailwindColour
-  name: string
-  sample: TailwindBg
-}
-
-type ColourGroup = {
-  title: string
-  values: ColourValue[]
-}
-
-export const COLOURS: ColourGroup[] = [
+export const COLOURS = [
   {
     title: "Girly 💅",
     values: [
@@ -153,9 +137,9 @@ export const COLOURS: ColourGroup[] = [
       },
     ],
   },
-]
+] as const
 
-export const COLOUR_OPTIONS: Record<string, ColourOption> = {
+export const COLOUR_OPTIONS = {
   violet: {
     backgrounds: [
       "bg-violet-50",
@@ -636,4 +620,4 @@ export const COLOUR_OPTIONS: Record<string, ColourOption> = {
       "text-black",
     ],
   },
-}
+} as const
