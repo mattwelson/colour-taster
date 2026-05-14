@@ -42,7 +42,7 @@ export function ColourTaster() {
             }))
           }
         >
-          <SelectTrigger>
+          <SelectTrigger className="w-full">
             <SelectValue placeholder="Select a colour" />
           </SelectTrigger>
           <SelectContent>
@@ -71,7 +71,7 @@ export function ColourTaster() {
                 backgroundIndex: parseInt(v, 10),
               }))
             }}
-            className="w-full"
+            className="w-full flex-wrap"
           >
             {options.backgrounds.map((bg, index) => (
               <ToggleGroupItem
@@ -79,7 +79,7 @@ export function ColourTaster() {
                 value={index.toString()}
                 className={cn(
                   bg,
-                  "h-10 rounded-full border-2 border-transparent transition-all data-[state=on]:scale-110 data-[state=on]:border-black"
+                  "srhink h-10 flex-1 rounded-full border-2 border-transparent transition-all data-[state=on]:scale-110 data-[state=on]:border-black"
                 )}
               />
             ))}
@@ -98,7 +98,7 @@ export function ColourTaster() {
                 foregroundIndex: parseInt(v, 10),
               }))
             }}
-            className="w-full"
+            className="w-full flex-wrap"
           >
             {options.foregrounds.map((fg, index) => (
               <ToggleGroupItem
@@ -107,7 +107,7 @@ export function ColourTaster() {
                 className={cn(
                   background ?? "bg-gray-100",
                   fg,
-                  "lg:text-md rounded-full border-2 border-transparent px-3 py-1 text-sm font-medium transition-all data-[state=on]:scale-105 data-[state=on]:border-black"
+                  "flex-1 shrink rounded-full border-2 border-transparent py-1 text-xs font-medium transition-all data-[state=on]:scale-105 data-[state=on]:border-black md:text-sm"
                 )}
               >
                 Aa
