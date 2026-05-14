@@ -1,4 +1,5 @@
 ---
+import { ColourWrapper } from "@/components/colour-wrapper"
 import "@/styles/global.css"
 ---
 
@@ -7,9 +8,9 @@ import "@/styles/global.css"
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Astro App</title>
+    <title>💄 Colour Taster</title>
   </head>
   <body>
-    <slot />
+    <ColourWrapper client:load><slot /></ColourWrapper>
   </body>
 </html>
